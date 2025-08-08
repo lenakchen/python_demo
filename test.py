@@ -5,10 +5,11 @@ from platform_technical_screen import sort
 class TestPackage(TestCase):
 
     def test_invalid_input(self):
-        with self.assertRaises(ValueError):
+        with self.assertRaises(AssertionError):
             sort(width=0, height=1, length=90, mass=19)
-        with self.assertRaises(ValueError):
+        with self.assertRaises(AssertionError):
             sort(width=10, height=1, length=90, mass=0)
+
 
     def test_standard_output(self):
         label = sort(width=100, height=100, length=90, mass=19)
